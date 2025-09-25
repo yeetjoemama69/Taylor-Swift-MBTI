@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-g" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Eras of You: A Taylor's Version Personality Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'serif': ['Playfair Display', 'serif'],
+              'sans': ['Poppins', 'sans-serif'],
+            },
+            animation: {
+              'fade-in': 'fadeIn 1s ease-in-out',
+              'fade-in-slow': 'fadeIn 1.5s ease-in-out',
+              'sparkle': 'sparkle 5s infinite linear',
+              'text-focus-in': 'text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both',
+              'slide-in-bottom': 'slide-in-bottom 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both',
+              'intro-sparkle': 'intro-sparkle 3s ease-in-out forwards',
+              'intro-text': 'intro-text 3s ease-in-out forwards'
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: 0 },
+                '100%': { opacity: 1 },
+              },
+              sparkle: {
+                '0%, 100%': { opacity: 0, transform: 'scale(0.5)' },
+                '50%': { opacity: 1, transform: 'scale(1.2)' },
+              },
+              'text-focus-in': {
+                '0%': { filter: 'blur(12px)', opacity: 0 },
+                '100%': { filter: 'blur(0px)', opacity: 1 },
+              },
+              'slide-in-bottom': {
+                '0%': { transform: 'translateY(50px)', opacity: 0 },
+                '100%': { transform: 'translateY(0)', opacity: 1 },
+              },
+              'intro-sparkle': {
+                '0%': { transform: 'scale(0) rotate(0deg)', opacity: 0 },
+                '50%': { transform: 'scale(1.5) rotate(180deg)', opacity: 1 },
+                '100%': { transform: 'scale(0) rotate(360deg)', opacity: 0 },
+              },
+              'intro-text': {
+                '0%': { opacity: 0 },
+                '20%': { opacity: 1 },
+                '80%': { opacity: 1 },
+                '100%': { opacity: 0 },
+              }
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
+  }
+}
+</script>
+</head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
